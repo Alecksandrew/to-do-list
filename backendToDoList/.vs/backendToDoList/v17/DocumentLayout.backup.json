@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-08T22:58:21.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\LoginUserDto.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\LoginUserDto.cs",
+              "RelativeToolTip": "Dtos\\LoginUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T20:22:30.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T19:59:36.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-07T19:58:24.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\CreateUserDto.cs",
+              "RelativeToolTip": "Dtos\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T20:19:45.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T19:57:21.698Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
