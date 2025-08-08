@@ -13,19 +13,19 @@ namespace backendToDoList.Controllers
     [Route("Api/[controller]")]
     public class LoginController : Controller
     {
-        private readonly ToDoListDbContext _context;
+        private readonly ToDoListDbContext _dbContext;
         private readonly IConfiguration _configuration;
 
         public LoginController(ToDoListDbContext context, IConfiguration configuration)
         {
-            _context = context;
+            _dbContext = context;
             _configuration = configuration;
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginUserDto req)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(User => User.Email == req.Email);
+            var user = await _dbContext.Users.FirstOrDefaultAsync(User => User.Email == req.Email);
 
             if (user is null) return NotFound("Credentials are incorrect!");
             if (!BCrypt.Net.BCrypt.Verify(req.Password, user.Password)) return BadRequest("Credentials are incorrect!");
