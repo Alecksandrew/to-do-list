@@ -1,5 +1,6 @@
 ﻿using backendToDoList.Data;
 using backendToDoList.Dtos;
+using backendToDoList.Mappers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,15 +29,29 @@ namespace backendToDoList.Controllers
             List<Entities.Task> tasks = await _dbContext.Tasks.Where(task => task.UserId == int.Parse(userId)).ToListAsync();
 
             List<TaskDto> tasksToFrontend = tasks.Select(task =>
-            new TaskDto
-            {
-                Title = task.Title,
-                Description = task.Description,
-                IsDone = task.IsDone,
-                Deadline = task.Deadline,
-            }).ToList();
+            TaskMapper.ToTaskDto(task)).ToList();
 
             return Ok(tasksToFrontend);
+        }
+
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> CreateTask(CreateTaskDto req)
+        {
+            if (req.Title == null || req.Title == String.Empty) return BadRequest("It is missing title of the task");
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null) return Unauthorized();
+
+            Entities.Task newTask = TaskMapper.ToTaskEntity(req, int.Parse(userId));
+
+            await _dbContext.Tasks.AddAsync(newTask);
+            
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(TaskMapper.ToTaskDto(newTask));
+
         }
     }
 }
