@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backendToDoList.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class UsersController : Controller
     {
         private readonly ToDoListDbContext _dbContext;
