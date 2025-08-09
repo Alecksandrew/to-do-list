@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\data\\todolistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:data\\todolistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ToDoListDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Data\\ToDoListDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ToDoListDbContext.cs",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Data\\ToDoListDbContext.cs",
-              "RelativeToolTip": "Data\\ToDoListDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwFEAAAAAAAAAAAAAAA==",
+              "Title": "TaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\TaskDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\TaskDto.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Dtos\\TaskDto.cs",
+              "RelativeToolTip": "Dtos\\TaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T23:32:33.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Entities\\UserEntity.cs",
-              "RelativeDocumentMoniker": "Entities\\UserEntity.cs",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Entities\\UserEntity.cs",
-              "RelativeToolTip": "Entities\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T23:32:29.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TaskEntity.cs",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Entities\\TaskEntity.cs",
-              "RelativeDocumentMoniker": "Entities\\TaskEntity.cs",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Entities\\TaskEntity.cs",
-              "RelativeToolTip": "Entities\\TaskEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T23:32:26.345Z",
+              "WhenOpened": "2025-08-09T02:48:18.045Z",
               "EditorCaption": ""
             },
             {
@@ -75,7 +41,7 @@
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
               "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\TasksController.cs",
               "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-08T23:10:25.347Z",
               "EditorCaption": ""

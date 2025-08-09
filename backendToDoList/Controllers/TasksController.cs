@@ -47,11 +47,50 @@ namespace backendToDoList.Controllers
             Entities.Task newTask = TaskMapper.ToTaskEntity(req, int.Parse(userId));
 
             await _dbContext.Tasks.AddAsync(newTask);
-            
+
             await _dbContext.SaveChangesAsync();
 
             return Ok(TaskMapper.ToTaskDto(newTask));
 
         }
+
+        [HttpPut("{id}")]
+        [Authorize]
+        public async Task<IActionResult> UpdateTask(TaskDto req, int id)
+        {
+            var taskToUpdate = await _dbContext.Tasks.FirstOrDefaultAsync(task => task.Id == id);
+            if (taskToUpdate == null) return NotFound("This task doesnt exist");
+
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            bool isUserTaskOwner = userId == taskToUpdate.UserId;
+            if (!isUserTaskOwner) return Forbid();
+
+            taskToUpdate.Title = req.Title;
+            taskToUpdate.Description = req.Description;
+            taskToUpdate.IsDone = req.IsDone;
+            taskToUpdate.Deadline = req.Deadline;
+
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteTask(int id)
+        {
+            var taskToDelete = await _dbContext.Tasks.FirstOrDefaultAsync(task => task.Id == id);
+            if (taskToDelete == null) return NotFound("This task already doesnt exist!");
+
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            bool isUserTaskOwner = userId == taskToDelete.UserId;
+            if (!isUserTaskOwner) return Forbid();
+
+            _dbContext.Tasks.Remove(taskToDelete);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
     }
 }

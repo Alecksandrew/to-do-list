@@ -4,7 +4,7 @@ namespace backendToDoList.Mappers
 {
     public static class TaskMapper
     {
-        public static Entities.Task ToTaskEntity(TaskDto task, int userId)
+        public static Entities.Task ToTaskEntity(CreateTaskDto task, int userId)
         {
             Entities.Task taskEntity = new Entities.Task
             {
@@ -22,6 +22,7 @@ namespace backendToDoList.Mappers
         {
             TaskDto taskDto = new TaskDto
             {
+                Id = task.Id,
                 Title = task.Title,
                 Description = task.Description,
                 IsDone = task.IsDone,
