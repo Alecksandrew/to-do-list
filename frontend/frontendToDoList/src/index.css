@@ -4,6 +4,13 @@
     --color-custom-green: #12B780;
 }
 
+@layer base {
+    h1 {
+        @apply font-bold text-2xl
+    }
+}
+
+
 @layer components {
     .input {
         @apply bg-gray-100 rounded border-1 border-gray-400 text-gray-700 outline-custom-green focus:outline-1 p-0.5

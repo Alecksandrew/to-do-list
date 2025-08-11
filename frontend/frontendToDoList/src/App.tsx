@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import LoginForm from "./components/LoginForm"
+import LoginPage from "./pages/LoginPage"
 
 function App() {
 
 
   return (
-    <LoginForm/>
+    <LoginPage/>
   )
 }
 

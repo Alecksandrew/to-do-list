@@ -1,0 +1,75 @@
+import { useState } from "react";
+import { BACKEND_URL } from "../backendURL";
+
+type UserData = {
+  email: string;
+  password: string;
+  confirmPassword?: string;
+};
+
+const emptyUserData = {
+  email: "",
+  password: "",
+};
+
+export default function useLoginForm() {
+  const [isLogin, setIsLogin] = useState<boolean>(true);
+  const [isRegister, setIsRegister] = useState<boolean>(false);
+  const [userData, setUserData] = useState<UserData>(emptyUserData);
+
+  function handleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
+    e.preventDefault();
+    setIsLogin(true);
+    setIsRegister(false);
+  }
+
+  function handleRegister(e: React.MouseEvent<HTMLButtonElement>): void {
+    e.preventDefault();
+    setIsLogin(false);
+    setIsRegister(true);
+  }
+
+  async function handleForm(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const endpoint = isLogin ? "/api/login" : "/api/users";
+    const payload = isLogin
+      ? { email: userData.email, password: userData.password }
+      : userData;
+    const url = `${BACKEND_URL}${endpoint}`;
+    const aditionalInfos = {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    };
+
+    try {
+      const response = await fetch(url, aditionalInfos);
+
+      if (!response.ok) throw new Error(response.statusText);
+
+      const data = await response.json();
+
+      if (isLogin) {
+        localStorage.setItem("authToken", data.token);
+      } else {
+        setIsLogin(true);
+        setIsRegister(false);
+      }
+    } catch (error) {
+      console.error("Something bad has happened", error);
+    }
+  }
+
+  function updateUserData(
+    e: React.ChangeEvent<HTMLInputElement>,
+    propertyName: string
+  ): void {
+    setUserData({ ...userData, [propertyName]: e.target.value });
+  }
+
+
+  return {isLogin, isRegister, handleLogin, handleRegister, handleForm, updateUserData}
+}

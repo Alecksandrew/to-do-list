@@ -10,7 +10,7 @@ using System.Text;
 namespace backendToDoList.Controllers
 {
     [ApiController]
-    [Route("Api/[controller]")]
+    [Route("api/[controller]")]
     public class LoginController : Controller
     {
         private readonly ToDoListDbContext _dbContext;

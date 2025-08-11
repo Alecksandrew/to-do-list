@@ -36,7 +36,13 @@ namespace backendToDoList.Controllers
 
             await _dbContext.SaveChangesAsync();
 
-            return CreatedAtRoute("GetUser", new { id = newUser.Id }, newUser);
+            UserDto userToReturn = new UserDto
+            {
+                Id = newUser.Id,
+                Email = newUser.Email
+            };
+
+            return StatusCode(201, userToReturn);
         }
     }
 }
