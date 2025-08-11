@@ -29,23 +29,29 @@ export default function useLoginForm() {
     setIsRegister(true);
   }
 
+  function arePasswordsTheSame(obj) {
+    return obj.password === obj.confirmPassword;
+  }
+
   async function handleForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const endpoint = isLogin ? "/api/login" : "/api/users";
-    const payload = isLogin
-      ? { email: userData.email, password: userData.password }
-      : userData;
-    const url = `${BACKEND_URL}${endpoint}`;
-    const aditionalInfos = {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    };
-
     try {
+      if (!arePasswordsTheSame(userData)) throw new Error("Passwords must be the same!");
+
+      const endpoint = isLogin ? "/api/login" : "/api/users";
+      const payload = isLogin
+        ? { email: userData.email, password: userData.password }
+        : userData;
+      const url = `${BACKEND_URL}${endpoint}`;
+      const aditionalInfos = {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      };
+
       const response = await fetch(url, aditionalInfos);
 
       if (!response.ok) throw new Error(response.statusText);
@@ -59,7 +65,7 @@ export default function useLoginForm() {
         setIsRegister(false);
       }
     } catch (error) {
-      console.error("Something bad has happened", error);
+      console.error(error);
     }
   }
 
@@ -70,6 +76,12 @@ export default function useLoginForm() {
     setUserData({ ...userData, [propertyName]: e.target.value });
   }
 
-
-  return {isLogin, isRegister, handleLogin, handleRegister, handleForm, updateUserData}
+  return {
+    isLogin,
+    isRegister,
+    handleLogin,
+    handleRegister,
+    handleForm,
+    updateUserData,
+  };
 }
