@@ -29,7 +29,7 @@ export default function useLoginForm() {
     setIsRegister(true);
   }
 
-  function arePasswordsTheSame(obj) {
+  function arePasswordsTheSame(obj:UserData) {
     return obj.password === obj.confirmPassword;
   }
 
