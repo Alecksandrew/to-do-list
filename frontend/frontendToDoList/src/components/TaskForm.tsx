@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, type SetStateAction } from "react";
 
 type TaskForm = {
     className?: string,
+    setTasksData: Dispatch<SetStateAction<TaskData[]>>,
+    tasksData: TaskData[]
 }
 
-type TaskData = {
+export type TaskData = {
     title: string,
     description?: string,
     deadline?:string
@@ -16,7 +18,7 @@ const emptyTaskData = {
     deadline:""
 }
 
-export default function TaskForm({className}:TaskForm) {
+export default function TaskForm({className, tasksData, setTasksData}:TaskForm) {
     const [ taskData, setTaskData ] = useState<TaskData>(emptyTaskData);
 
     function handleTaskData(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, propertyName:string):void {
@@ -24,6 +26,10 @@ export default function TaskForm({className}:TaskForm) {
         console.log(taskData);
     };
 
+    function createTask(){
+      if(!taskData.title.trim()) return;
+      setTasksData([...tasksData, taskData]);
+    }
 
   return (
     <form className={`${className} flex flex-col gap-2`}>
@@ -34,7 +40,7 @@ export default function TaskForm({className}:TaskForm) {
           </label>
           <label className="flex flex-col text-left">
             Deadline
-            <input type="date" name="date" id="" onChange={(e) => handleTaskData(e, "deadline")} className="input" />
+            <input type="date" name="deadline" id="" onChange={(e) => handleTaskData(e, "deadline")} className="input" />
           </label>
       </div>
       <label className="flex flex-col text-left mb-4">
@@ -47,7 +53,7 @@ export default function TaskForm({className}:TaskForm) {
           onChange={(e) => handleTaskData(e, "description")}
         />
       </label>
-      <button type="button" className="bg-custom-green rounded p-0.5 text-white font-semibold w-full">Create task</button>
+      <button type="button" onClick={createTask} className="bg-custom-green rounded p-0.5 text-white font-semibold w-full">Create task</button>
       
     </form>
   );
