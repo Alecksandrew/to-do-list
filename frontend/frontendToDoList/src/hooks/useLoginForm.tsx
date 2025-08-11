@@ -37,7 +37,7 @@ export default function useLoginForm() {
     e.preventDefault();
 
     try {
-      if (!arePasswordsTheSame(userData)) throw new Error("Passwords must be the same!");
+      if (isRegister && !arePasswordsTheSame(userData)) throw new Error("Passwords must be the same!");
 
       const endpoint = isLogin ? "/api/login" : "/api/users";
       const payload = isLogin

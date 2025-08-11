@@ -1,0 +1,14 @@
+﻿@backendToDoList_HostAddress = https://localhost:7095
+@jwt_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJhbGVja3NhbmRyZXdjb250YXRvQGdtYWlsLmNvbSIsImp0aSI6ImUzOWZlZjQ5LTgzY2UtNGU5ZC04MTNhLTY3ZTM1NTUzMjNlZiIsImV4cCI6MTc1NDkzOTkwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE1IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE1In0.UK4aXevCeS3Pb2ZdLfbjtYIW1noRt_aUZred5FxDwQE
+
+### Cria uma nova tarefa para o usuário autenticado
+POST {{backendToDoList_HostAddress}}/api/tasks
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "title": "Testar a API pelo Visual Studio",
+  "description": "Usar o arquivo .http para enviar a requisição.",
+  "deadline": "2025-12-31"
+}
+###

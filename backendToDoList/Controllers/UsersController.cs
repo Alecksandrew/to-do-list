@@ -26,6 +26,8 @@ namespace backendToDoList.Controllers
 
             if (hasAlreadyAccount != null) return BadRequest("User has already an account");
 
+            if (req.Password != req.ConfirmPassword) return BadRequest("Password and confirm passowrd must be the same");
+
             User newUser = new User
             {
                 Email = req.Email,

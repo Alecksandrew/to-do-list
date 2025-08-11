@@ -1,5 +1,6 @@
 import { useState, type SetStateAction, type Dispatch } from "react";
 import { type TaskData } from "../types/task";
+import { BACKEND_URL } from "../backendURL";
 
 type TaskFormProps = {
   className?: string;
@@ -7,10 +8,10 @@ type TaskFormProps = {
   tasksData: TaskData[];
 };
 
-const emptyTaskData:TaskData = {
+const emptyTaskData: TaskData = {
   title: "",
   description: "",
-  deadline: "",
+  deadline: null,
 };
 
 export default function TaskForm({
@@ -28,9 +29,34 @@ export default function TaskForm({
     console.log(taskData);
   }
 
-  function createTask() {
+  async function createTask() {
     if (!taskData.title.trim()) return;
-    setTasksData([...tasksData, taskData]);
+
+    try {
+      //send to backend store in database
+      const token = localStorage.getItem("authToken");
+
+      if(!token) throw new Error("User is not connected");
+
+      const additionalInfos = {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": `Bearer ${token}` 
+        },
+        body: JSON.stringify(taskData),
+      };
+      const url = `${BACKEND_URL}/api/tasks`;
+
+      const response = await fetch(url, additionalInfos);
+
+      if (!response.ok) throw new Error(response.statusText);
+      
+      const data = await response.json();
+      setTasksData([...tasksData, data]);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -50,11 +76,11 @@ export default function TaskForm({
         <label className="flex flex-col text-left">
           Deadline
           <input
-            type="date"
+            type="datetime-local"
             name="deadline"
             id=""
             onChange={(e) => handleTaskData(e, "deadline")}
-            className="input"
+            className="input max-w-[165px]"
           />
         </label>
       </div>

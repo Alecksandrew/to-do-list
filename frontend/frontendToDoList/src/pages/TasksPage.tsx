@@ -13,6 +13,7 @@ const EmptyTasks: TaskData[] = [
   {
     title: "Finalizar o projeto To-Do List",
     description: "Conectar o front-end em React com o backend em .NET.",
+    deadline:null,
   },
 ];
 
@@ -23,7 +24,7 @@ export default function TasksPage() {
   function listTasks(tasks: TaskData[]) {
     return tasks.map((task, index) => {
       return (
-        <li key={index}>
+        <li key={index} className="list-none">
           <Task
             title={task.title}
             description={task.description}
