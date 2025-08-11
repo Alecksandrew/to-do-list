@@ -1,14 +1,14 @@
 import { useState } from "react";
 import TaskForm from "../components/TaskForm";
 import Task from "../components/Task";
-import { type TaskData } from "../components/TaskForm";
+import { type TaskData } from "../types/task";
 
 const EmptyTasks: TaskData[] = [
   {
     title: "Aprender TypeScript",
     description:
       "Estudar os conceitos básicos como tipos, interfaces e genéricos.",
-    rawDate: "2025-08-15",
+    deadline: "2025-08-15",
   },
   {
     title: "Finalizar o projeto To-Do List",
@@ -27,7 +27,7 @@ export default function TasksPage() {
           <Task
             title={task.title}
             description={task.description}
-            rawDate={task.deadline}
+            deadline={task.deadline}
           />
         </li>
       );

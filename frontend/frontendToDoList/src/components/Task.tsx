@@ -1,15 +1,8 @@
 import { FaPen, FaTrash } from "react-icons/fa";
+import { type TaskData } from "../types/task";
 
-
-
-export type Task = {
-  title: string;
-  description?: string;
-  rawDate?: string;
-};
-
-export default function Task({ title, description, rawDate }: Task) {
-  function formatDate(rawDate: string) {
+export default function Task({ title, description, deadline }: TaskData) {
+  function formatDeadline(rawDate: string) {
     if (!rawDate) return;
     const [year, month, day] = rawDate.split("-");
     return `${month}-${day}-${year}`; // english format
@@ -21,7 +14,7 @@ export default function Task({ title, description, rawDate }: Task) {
       <div className="mx-3">
         <h3 className="font-bold text-xl">{title}</h3>
         <p className="text-sm mb-3">{description}</p>
-        {rawDate ? <p className="text-xs italic">Deadline: {formatDate(rawDate)}</p> : null}
+        {deadline ? <p className="text-xs italic">Deadline: {formatDeadline(deadline)}</p> : null}
       </div>
       <div className="flex ml-auto gap-4">
           <button >
