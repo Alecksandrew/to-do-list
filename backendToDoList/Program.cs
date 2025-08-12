@@ -39,7 +39,9 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddDbContext<ToDoListDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlServerOptions => sqlServerOptions.EnableRetryOnFailure()
+    ));
 
 builder.Services.AddControllers();
 
