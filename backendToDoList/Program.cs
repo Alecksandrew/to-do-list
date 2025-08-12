@@ -32,7 +32,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("https://to-do-list-ten-rust-85.vercel.app/")
+                          policy.WithOrigins("https://to-do-list-ten-rust-85.vercel.app")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                       });

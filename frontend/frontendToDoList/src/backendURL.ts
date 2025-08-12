@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://to-do-list-api-gbd4c9e3fhckc8bk.brazilsouth-01.azurewebsites.net/";
+export const BACKEND_URL = "https://to-do-list-api-gbd4c9e3fhckc8bk.brazilsouth-01.azurewebsites.net";
