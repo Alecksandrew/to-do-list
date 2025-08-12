@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import TaskForm from "../components/TaskForm";
 import Task from "../components/Task";
+import { BACKEND_URL } from "../backendURL";
 import { type TaskData } from "../types/task";
 
 const EmptyTasks: TaskData[] = [
@@ -19,7 +21,38 @@ const EmptyTasks: TaskData[] = [
 
 export default function TasksPage() {
   const [tasksData, setTasksData] = useState<TaskData[]>(EmptyTasks);
+  const navigate = useNavigate();
   console.log(tasksData);
+
+  useEffect(() => {
+    async function fetchTasks() {
+      try {
+        const token = localStorage.getItem("authToken");
+        if (!token) {
+          navigate("/")
+          return;
+        }
+
+        const response = await fetch(`${BACKEND_URL}/api/tasks`, {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Falha ao buscar as tarefas");
+        }
+
+        const data = await response.json();
+        setTasksData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchTasks();
+
+  }, []);
 
   function listTasks(tasks: TaskData[]) {
     return tasks.map((task, index) => {
