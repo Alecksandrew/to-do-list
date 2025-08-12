@@ -15,7 +15,7 @@ const EmptyTasks: TaskData[] = [
   {
     title: "Finalizar o projeto To-Do List",
     description: "Conectar o front-end em React com o backend em .NET.",
-    deadline:null,
+    deadline: null,
   },
 ];
 
@@ -29,14 +29,14 @@ export default function TasksPage() {
       try {
         const token = localStorage.getItem("authToken");
         if (!token) {
-          navigate("/")
+          navigate("/");
           return;
         }
 
         const response = await fetch(`${BACKEND_URL}/api/tasks`, {
           headers: {
-            "Authorization": `Bearer ${token}`
-          }
+            Authorization: `Bearer ${token}`,
+          },
         });
 
         if (!response.ok) {
@@ -51,29 +51,57 @@ export default function TasksPage() {
     }
 
     fetchTasks();
-
   }, []);
 
-  function deleteTaskFromDatabase(id:number){
-  
-      const token = localStorage.getItem("authToken");
-      const aditionalInfos = {
-          method: "DELETE",
-          headers: {
-            "Content-type": "application/json",
-            "Authorization": `Bearer ${token}`,
-          },
-        };
-      
-      fetch(`${BACKEND_URL}/api/tasks/${id}`, aditionalInfos)
-      .then(response => {
-        if(!response.ok) throw new Error(response.statusText);
-  
-        if (response.status === 204) {
-           setTasksData(prevTasks => prevTasks.filter(task => task.id !== id))
-        }
-      })
+  function deleteTaskFromDatabase(id: number) {
+    const token = localStorage.getItem("authToken");
+    const aditionalInfos = {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    fetch(`${BACKEND_URL}/api/tasks/${id}`, aditionalInfos).then((response) => {
+      if (!response.ok) throw new Error(response.statusText);
+
+      if (response.status === 204) {
+        setTasksData((prevTasks) => prevTasks.filter((task) => task.id !== id));
+      }
+    });
+  }
+
+  async function handleUpdateTask(
+    id: number,
+    updatedData: { title: string; description: string | null }
+  ) {
+    const token = localStorage.getItem("authToken");
+    if (!token) return navigate("/");
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/tasks/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(updatedData),
+      });
+
+      if (response.status === 204) {
+        setTasksData((prevTasks) =>
+          prevTasks.map((task) =>
+            task.id === id ? { ...task, ...updatedData } : task
+          )
+        );
+      } else {
+        throw new Error("Falha ao atualizar a tarefa");
+      }
+    } catch (error) {
+      console.error(error);
     }
+  }
 
   function listTasks(tasks: TaskData[]) {
     return tasks.map((task, index) => {
@@ -85,6 +113,7 @@ export default function TasksPage() {
             description={task.description}
             deadline={task.deadline}
             onDelete={deleteTaskFromDatabase}
+            onUpdate={handleUpdateTask}
           />
         </li>
       );
@@ -93,7 +122,11 @@ export default function TasksPage() {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <TaskForm setTasksData={setTasksData} tasksData={tasksData} className="mb-10" />
+      <TaskForm
+        setTasksData={setTasksData}
+        tasksData={tasksData}
+        className="mb-10"
+      />
       <ul>{listTasks(tasksData)}</ul>
     </div>
   );
