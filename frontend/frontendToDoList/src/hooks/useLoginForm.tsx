@@ -17,6 +17,7 @@ export default function useLoginForm() {
   const [isLogin, setIsLogin] = useState<boolean>(true);
   const [isRegister, setIsRegister] = useState<boolean>(false);
   const [userData, setUserData] = useState<UserData>(emptyUserData);
+   const [registrationSuccess, setRegistrationSuccess] = useState<boolean>(false);
   const navigate = useNavigate();
 
   function handleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
@@ -65,6 +66,7 @@ export default function useLoginForm() {
         localStorage.setItem("authToken", data.token);
         navigate('/tasks')
       } else {
+        setRegistrationSuccess(true);
         setIsLogin(true);
         setIsRegister(false);
       }
@@ -87,5 +89,7 @@ export default function useLoginForm() {
     handleRegister,
     handleForm,
     updateUserData,
+    setRegistrationSuccess,
+    registrationSuccess
   };
 }

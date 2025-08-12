@@ -3,19 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\backendtodolist.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:backendtodolist.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jonat\\AppData\\Roaming\\Microsoft\\UserSecrets\\425acef1-9774-471e-9f52-1491b8e6c8a0\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{456CE8CD-CD62-4B1B-8D2B-0978BBBEC2FE}|backendToDoList.csproj|c:\\users\\jonat\\desktop\\studies\\to-do-list\\backendtodolist\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,67 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvzwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T16:13:06.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwDAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:00:44.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\jonat\\AppData\\Roaming\\Microsoft\\UserSecrets\\425acef1-9774-471e-9f52-1491b8e6c8a0\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\425acef1-9774-471e-9f52-1491b8e6c8a0\\secrets.json",
-              "ToolTip": "C:\\Users\\jonat\\AppData\\Roaming\\Microsoft\\UserSecrets\\425acef1-9774-471e-9f52-1491b8e6c8a0\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\425acef1-9774-471e-9f52-1491b8e6c8a0\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-11T19:58:15.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T19:44:45.923Z"
+              "WhenOpened": "2025-08-12T15:02:28.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "backendToDoList.http",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\backendToDoList.http",
-              "RelativeDocumentMoniker": "backendToDoList.http",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\backendToDoList.http",
-              "RelativeToolTip": "backendToDoList.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-08-11T19:34:43.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TasksController.cs",
-              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\TasksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
-              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\TasksController.cs",
-              "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowCcAAABBAAAAAAAAAA==",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\jonat\\Desktop\\Studies\\to-do-list\\backendToDoList\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T19:25:48.273Z",
+              "WhenOpened": "2025-08-12T15:02:18.4Z",
               "EditorCaption": ""
             }
           ]
