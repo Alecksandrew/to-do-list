@@ -24,7 +24,7 @@ export default function TasksPage() {
   function listTasks(tasks: TaskData[]) {
     return tasks.map((task, index) => {
       return (
-        <li key={index} className="list-none">
+        <li key={index} className="list-none mb-3">
           <Task
             title={task.title}
             description={task.description}
@@ -36,9 +36,9 @@ export default function TasksPage() {
   }
 
   return (
-    <>
-      <TaskForm setTasksData={setTasksData} tasksData={tasksData} />
-      {listTasks(tasksData)}
-    </>
+    <div className="max-w-3xl mx-auto">
+      <TaskForm setTasksData={setTasksData} tasksData={tasksData} className="mb-10" />
+      <ul>{listTasks(tasksData)}</ul>
+    </div>
   );
 }
