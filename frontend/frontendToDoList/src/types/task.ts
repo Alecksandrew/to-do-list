@@ -1,7 +1,7 @@
 
 
 export type TaskData = {
-    id:number,
+    id?:number,
     title: string,
     description: string | null,
     deadline:string | null

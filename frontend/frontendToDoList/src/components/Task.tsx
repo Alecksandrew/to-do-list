@@ -15,6 +15,7 @@ export default function Task({ id, title, description, deadline, onDelete, onUpd
   const [editedDeadline, setEditedDeadline] = useState(deadline);
 
    function handleSave() {
+    if(!id) return;
     onUpdate(id, { title: editedTitle, description: editedDescription, deadline: editedDeadline  });
     setIsEditing(false); // Exit edit mode after saving
   }
@@ -106,7 +107,11 @@ export default function Task({ id, title, description, deadline, onDelete, onUpd
             <button onClick={() => setIsEditing(true)} >
               <FaPen size={20} className="hover:fill-custom-green" />
             </button>
-            <button onClick={() => onDelete(id)}>
+            <button onClick={() => {
+              if(!id)return
+              onDelete(id)
+            }
+            }>
               <FaTrash size={20} className=" hover:text-red-700" />
             </button>
           </>
