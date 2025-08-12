@@ -54,14 +54,37 @@ export default function TasksPage() {
 
   }, []);
 
+  function deleteTaskFromDatabase(id:number){
+  
+      const token = localStorage.getItem("authToken");
+      const aditionalInfos = {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+        };
+      
+      fetch(`${BACKEND_URL}/api/tasks/${id}`, aditionalInfos)
+      .then(response => {
+        if(!response.ok) throw new Error(response.statusText);
+  
+        if (response.status === 204) {
+           setTasksData(prevTasks => prevTasks.filter(task => task.id !== id))
+        }
+      })
+    }
+
   function listTasks(tasks: TaskData[]) {
     return tasks.map((task, index) => {
       return (
         <li key={index} className="list-none mb-3">
           <Task
+            id={task.id}
             title={task.title}
             description={task.description}
             deadline={task.deadline}
+            onDelete={deleteTaskFromDatabase}
           />
         </li>
       );

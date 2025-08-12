@@ -1,7 +1,12 @@
 import { FaPen, FaTrash } from "react-icons/fa";
 import { type TaskData } from "../types/task";
 
-export default function Task({ title, description, deadline }: TaskData) {
+
+type TaskProps = {
+  onDelete: (id:number) => void
+} & TaskData
+
+export default function Task({ id, title, description, deadline, onDelete }: TaskProps) {
   function formatDeadline(rawDate: string | undefined): string {
     if (!rawDate) {
       return "No deadline set";
@@ -24,6 +29,8 @@ export default function Task({ title, description, deadline }: TaskData) {
     return `${formattedDate} at ${formattedTime}`;
   }
 
+  
+
   return (
     <div className="flex input items-baseline p-2.5 min-h-[100px]">
       <input type="checkbox" name="isDone" id="" />
@@ -38,7 +45,7 @@ export default function Task({ title, description, deadline }: TaskData) {
         <button>
           <FaPen size={20} />
         </button>
-        <button>
+        <button onClick={() => onDelete(id)}>
           <FaTrash size={20} />
         </button>
       </div>
