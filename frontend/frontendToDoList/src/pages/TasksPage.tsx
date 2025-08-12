@@ -4,6 +4,7 @@ import TaskForm from "../components/TaskForm";
 import Task from "../components/Task";
 import { BACKEND_URL } from "../backendURL";
 import { type TaskData } from "../types/task";
+import Header from "../components/Header";
 
 const EmptyTasks: TaskData[] = [
   {
@@ -121,13 +122,16 @@ export default function TasksPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <TaskForm
-        setTasksData={setTasksData}
-        tasksData={tasksData}
-        className="mb-10"
-      />
-      <ul>{listTasks(tasksData)}</ul>
-    </div>
+    <>
+      <Header/>
+      <div className="max-w-3xl mx-auto">
+        <TaskForm
+          setTasksData={setTasksData}
+          tasksData={tasksData}
+          className="mb-10"
+        />
+        <ul>{listTasks(tasksData)}</ul>
+      </div>
+    </>
   );
 }
