@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../backendURL";
 
 type UserData = {
@@ -16,6 +17,7 @@ export default function useLoginForm() {
   const [isLogin, setIsLogin] = useState<boolean>(true);
   const [isRegister, setIsRegister] = useState<boolean>(false);
   const [userData, setUserData] = useState<UserData>(emptyUserData);
+  const navigate = useNavigate();
 
   function handleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
     e.preventDefault();
@@ -35,6 +37,7 @@ export default function useLoginForm() {
 
   async function handleForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
 
     try {
       if (isRegister && !arePasswordsTheSame(userData)) throw new Error("Passwords must be the same!");
@@ -60,6 +63,7 @@ export default function useLoginForm() {
 
       if (isLogin) {
         localStorage.setItem("authToken", data.token);
+        navigate('/tasks')
       } else {
         setIsLogin(true);
         setIsRegister(false);
