@@ -72,6 +72,7 @@ export default function useLoginForm() {
         setIsLogin(true);
         setIsRegister(false);
       }
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
       setIsLoading(false);
