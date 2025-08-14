@@ -1,5 +1,6 @@
 import useLoginForm from "../hooks/useLoginForm";
 import Warning from "./Warning";
+import { OrbitProgress } from "react-loading-indicators";
 
 type LoginForm = {
   className?: string;
@@ -14,12 +15,16 @@ export default function LoginForm({ className }: LoginForm) {
     handleForm,
     updateUserData,
     setRegistrationSuccess,
-    registrationSuccess
+    registrationSuccess,
+    isLoading
   } = useLoginForm();
 
   return (
     <>
+      {isLoading && registrationSuccess && <OrbitProgress dense color="#12B780" size="medium" text="Wait, your account is being created" textColor="" />}
+      {isLoading && !registrationSuccess && <OrbitProgress dense color="#12B780" size="medium" text="Wait a second and you will enjoy your to do list" textColor="" />}
       {registrationSuccess && <Warning setRegistrationSucess={setRegistrationSuccess}/>}
+      {!isLoading &&
       <form
         action=""
         className={`${className} flex flex-col gap-2 p-3 outline-1 bg-white outline-gray-400 rounded shadow-lg`}
@@ -82,6 +87,7 @@ export default function LoginForm({ className }: LoginForm) {
           {isRegister ? "Register" : "Login"}
         </button>
       </form>
+      }
     </>
   );
 }

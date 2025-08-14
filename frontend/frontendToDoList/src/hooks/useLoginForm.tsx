@@ -14,6 +14,7 @@ const emptyUserData = {
 };
 
 export default function useLoginForm() {
+  const [ isLoading, setIsLoading] = useState<boolean>(false);
   const [isLogin, setIsLogin] = useState<boolean>(true);
   const [isRegister, setIsRegister] = useState<boolean>(false);
   const [userData, setUserData] = useState<UserData>(emptyUserData);
@@ -41,6 +42,7 @@ export default function useLoginForm() {
 
 
     try {
+      setIsLoading(true);
       if (isRegister && !arePasswordsTheSame(userData)) throw new Error("Passwords must be the same!");
 
       const endpoint = isLogin ? "/api/login" : "/api/users";
@@ -72,6 +74,7 @@ export default function useLoginForm() {
       }
     } catch (error) {
       console.error(error);
+      setIsLoading(false);
     }
   }
 
@@ -90,6 +93,7 @@ export default function useLoginForm() {
     handleForm,
     updateUserData,
     setRegistrationSuccess,
-    registrationSuccess
+    registrationSuccess,
+    isLoading
   };
 }
