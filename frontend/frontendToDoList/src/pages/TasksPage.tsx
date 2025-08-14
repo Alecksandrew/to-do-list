@@ -8,14 +8,14 @@ import Header from "../components/Header";
 
 const EmptyTasks: TaskData[] = [
   {
-    title: "Aprender TypeScript",
+    title: "",
     description:
-      "Estudar os conceitos básicos como tipos, interfaces e genéricos.",
-    deadline: "2025-08-15",
+      "",
+    deadline: "",
   },
   {
-    title: "Finalizar o projeto To-Do List",
-    description: "Conectar o front-end em React com o backend em .NET.",
+    title: "",
+    description: "",
     deadline: null,
   },
 ];
