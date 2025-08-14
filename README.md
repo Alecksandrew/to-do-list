@@ -48,6 +48,16 @@ Este projeto foi construído com foco em **arquitetura limpa e separação de re
 - **Roteamento:** Utiliza `react-router-dom` para criar uma experiência de Single-Page Application (SPA), com um componente `ProtectedRoute` que protege as rotas que exigem autenticação
 - **Gerenciamento de Token:** O token JWT é armazenado no `localStorage` e anexado a cada requisição para endpoints protegidos através do cabeçalho `Authorization`
 
+## 📸 Screenshots
+<img width="1183" height="909" alt="image" src="https://github.com/user-attachments/assets/eb42e813-56b1-4432-b220-1e3c6c890bd5" />
+<img width="1189" height="911" alt="image" src="https://github.com/user-attachments/assets/2d6f5e9d-3496-45d0-80db-a6b686e2e434" />
+<img width="787" height="157" alt="image" src="https://github.com/user-attachments/assets/ab28335b-8796-4e55-adbb-0ee6b69bc0b3" />
+
+
+
+
+
+
 ## 🚀 Tecnologias Utilizadas
 
 ### Backend
