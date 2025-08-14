@@ -21,8 +21,18 @@ export default function LoginForm({ className }: LoginForm) {
 
   return (
     <>
-      {isLoading && registrationSuccess && <OrbitProgress dense color="#12B780" size="medium" text="Wait, your account is being created" textColor="" />}
-      {isLoading && !registrationSuccess && <OrbitProgress dense color="#12B780" size="medium" text="Wait a second and you will enjoy your to do list" textColor="" />}
+      {isLoading && registrationSuccess && 
+      <>
+        <p>Wait, your account is being created</p>
+        <OrbitProgress dense color="#12B780" size="medium" text="" textColor="" />
+      </>  
+      }
+      {isLoading && !registrationSuccess && 
+      <>
+        <p>Wait a second and you will enjoy your to do list</p>
+        <OrbitProgress dense color="#12B780" size="medium" text="" textColor="" />
+      </>
+      }
       {registrationSuccess && <Warning setRegistrationSucess={setRegistrationSuccess}/>}
       {!isLoading &&
       <form
